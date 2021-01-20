@@ -1,0 +1,21 @@
+<?php
+
+namespace React\Promise;
+
+interface PromiseInterface
+{
+    /**
+     * @psalm-template TResolve
+     * @psalm-template TReject
+     *
+     * @psalm-param callable(TResolve):PromiseInterface|null $onFulfilled
+     * @psalm-param callable(TReject):PromiseInterface|null $onRejected
+     *
+     * @param callable|null $onFulfilled
+     * @param callable|null $onRejected
+     * @param callable|null $onProgress This argument is deprecated and should not be used anymore.
+     *
+     * @return PromiseInterface
+     */
+    public function then(callable $onFulfilled = null, callable $onRejected = null, callable $onProgress = null): PromiseInterface;
+}
