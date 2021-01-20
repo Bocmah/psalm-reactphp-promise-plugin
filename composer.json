@@ -1,12 +1,12 @@
 {
-    "name": "weirdan/psalm-plugin-skeleton",
-    "description": "Template to create psalm-plugin projects from",
+    "name": "bocmah/psalm-reactphp-promise-plugin",
+    "description": "Psalm plugin for react/promise",
     "type": "psalm-plugin",
     "license": "MIT",
     "authors": [
         {
-            "name": "Bruce Weirdan",
-            "email": "weirdan@gmail.com"
+            "name": "Artem Trushkin",
+            "email": "atrushkin1@gmail.com"
         }
     ],
     "require": {
