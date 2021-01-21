@@ -1,0 +1,41 @@
+<?php
+
+namespace React\Promise;
+
+/**
+ * @template TAlways
+ *
+ * @extends PromiseInterface<TResolve, TReject>
+ */
+interface ExtendedPromiseInterface extends PromiseInterface
+{
+    /**
+     * @param callable(TResolve):mixed|null $onFulfilled
+     * @param callable(TReject):mixed|null $onRejected
+     * @param callable|null $onProgress
+     *
+     * @return void
+     */
+    public function done($onFulfilled = null, $onRejected = null, $onProgress = null): void;
+
+    /**
+     * @param callable(TReject):mixed $onRejected
+     *
+     * @return ExtendedPromiseInterface
+     */
+    public function otherwise($onRejected): ExtendedPromiseInterface;
+
+    /**
+     * @param callable(TAlways):mixed $onFulfilledOrRejected
+     *
+     * @return ExtendedPromiseInterface
+     */
+    public function always($onFulfilledOrRejected): ExtendedPromiseInterface;
+
+    /**
+     * @param callable $onProgress
+     *
+     * @return ExtendedPromiseInterface
+     */
+    public function progress($onProgress): ExtendedPromiseInterface;
+}
