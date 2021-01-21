@@ -8,8 +8,8 @@ interface PromiseInterface
      * @psalm-template TResolve
      * @psalm-template TReject
      *
-     * @psalm-param callable(TResolve):PromiseInterface|null $onFulfilled
-     * @psalm-param callable(TReject):PromiseInterface|null $onRejected
+     * @psalm-param callable(TResolve):mixed $onFulfilled
+     * @psalm-param callable(TReject):mixed $onRejected
      *
      * @param callable|null $onFulfilled
      * @param callable|null $onRejected
