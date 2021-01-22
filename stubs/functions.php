@@ -5,34 +5,34 @@ namespace React\Promise;
 /**
  * @param array<array-key, mixed> $promisesOrValues
  *
- * @return ExtendedPromiseInterface
+ * @return PromiseInterface
  */
-function all($promisesOrValues): ExtendedPromiseInterface
+function all($promisesOrValues): PromiseInterface
 {
 }
 /**
  * @param array<array-key, mixed> $promisesOrValues
  *
- * @return ExtendedPromiseInterface
+ * @return PromiseInterface
  */
-function any($promisesOrValues): ExtendedPromiseInterface
+function any($promisesOrValues): PromiseInterface
 {
 }
 /**
  * @param array<array-key, mixed> $promisesOrValues
  * @param callable $mapFunc
  *
- * @return ExtendedPromiseInterface
+ * @return PromiseInterface
  */
-function map($promisesOrValues, $mapFunc): ExtendedPromiseInterface
+function map($promisesOrValues, $mapFunc): PromiseInterface
 {
 }
 /**
  * @param array<array-key, mixed> $promisesOrValues
  *
- * @return ExtendedPromiseInterface
+ * @return PromiseInterface
  */
-function race($promisesOrValues): ExtendedPromiseInterface
+function race($promisesOrValues): PromiseInterface
 {
 }
 /**
@@ -40,33 +40,33 @@ function race($promisesOrValues): ExtendedPromiseInterface
  * @param callable $reduceFunc
  * @param mixed|null $initialValue
  *
- * @return ExtendedPromiseInterface
+ * @return PromiseInterface
  */
-function reduce($promisesOrValues, $reduceFunc, $initialValue = null): ExtendedPromiseInterface
+function reduce($promisesOrValues, $reduceFunc, $initialValue = null): PromiseInterface
 {
 }
 /**
  * @param mixed|null $promiseOrValue
  *
- * @return ExtendedPromiseInterface
+ * @return PromiseInterface
  */
-function reject($promiseOrValue = null): ExtendedPromiseInterface
+function reject($promiseOrValue = null): PromiseInterface
 {
 }
 /**
  * @param mixed|null $promiseOrValue
  *
- * @return ExtendedPromiseInterface
+ * @return PromiseInterface
  */
-function resolve($promiseOrValue = null): ExtendedPromiseInterface
+function resolve($promiseOrValue = null): PromiseInterface
 {
 }
 /**
  * @param array<array-key, mixed> $promisesOrValues
  * @param int $howMany
  *
- * @return ExtendedPromiseInterface
+ * @return PromiseInterface
  */
-function some($promisesOrValues, $howMany): ExtendedPromiseInterface
+function some($promisesOrValues, $howMany): PromiseInterface
 {
 }
