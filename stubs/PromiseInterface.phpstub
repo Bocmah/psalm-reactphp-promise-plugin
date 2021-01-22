@@ -17,4 +17,11 @@ interface PromiseInterface
      * @return PromiseInterface
      */
     public function then(callable $onFulfilled = null, callable $onRejected = null, callable $onProgress = null): PromiseInterface;
+
+    /**
+     * @param callable $onRejected
+     *
+     * @return ExtendedPromiseInterface
+     */
+    public function otherwise($onRejected): PromiseInterface;
 }
