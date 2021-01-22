@@ -2,11 +2,12 @@
 
 namespace React\Promise;
 
+/**
+ * @psalm-template TResolve
+ */
 interface PromiseInterface
 {
     /**
-     * @psalm-template TResolve
-     *
      * @psalm-param callable(mixed):TResolve $onFulfilled
      * @psalm-param callable $onRejected
      *
