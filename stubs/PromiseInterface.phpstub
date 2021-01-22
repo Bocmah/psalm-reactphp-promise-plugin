@@ -6,10 +6,9 @@ interface PromiseInterface
 {
     /**
      * @psalm-template TResolve
-     * @psalm-template TReject
      *
-     * @psalm-param callable(TResolve):mixed $onFulfilled
-     * @psalm-param callable(TReject):mixed $onRejected
+     * @psalm-param callable(mixed):TResolve $onFulfilled
+     * @psalm-param callable $onRejected
      *
      * @param callable|null $onFulfilled
      * @param callable|null $onRejected

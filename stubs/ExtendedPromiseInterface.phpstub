@@ -3,15 +3,13 @@
 namespace React\Promise;
 
 /**
- * @template TAlways
- *
- * @extends PromiseInterface<TResolve, TReject>
+ * @extends PromiseInterface<TResolve>
  */
 interface ExtendedPromiseInterface extends PromiseInterface
 {
     /**
-     * @param callable(TResolve):mixed|null $onFulfilled
-     * @param callable(TReject):mixed|null $onRejected
+     * @param callable(mixed):TResolve|null $onFulfilled
+     * @param callable(mixed):(mixed|void)|null $onRejected
      * @param callable|null $onProgress
      *
      * @return void
@@ -19,14 +17,14 @@ interface ExtendedPromiseInterface extends PromiseInterface
     public function done($onFulfilled = null, $onRejected = null, $onProgress = null): void;
 
     /**
-     * @param callable(TReject):mixed $onRejected
+     * @param callable $onRejected
      *
      * @return ExtendedPromiseInterface
      */
     public function otherwise($onRejected): ExtendedPromiseInterface;
 
     /**
-     * @param callable(TAlways):mixed $onFulfilledOrRejected
+     * @param callable $onFulfilledOrRejected
      *
      * @return ExtendedPromiseInterface
      */
