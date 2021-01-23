@@ -63,8 +63,6 @@ function reject($promiseOrValue = null): PromiseInterface
  *     ? T
  *     : PromiseInterface<T>
  * )
- *
- * @return PromiseInterface
  */
 function resolve($promiseOrValue = null): PromiseInterface
 {
