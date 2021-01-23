@@ -54,7 +54,15 @@ function reject($promiseOrValue = null): PromiseInterface
 {
 }
 /**
- * @param mixed|null $promiseOrValue
+ * @psalm-template T
+ *
+ * @param T $promiseOrValue
+ *
+ * @psalm-return (
+ *     T is PromiseInterface
+ *     ? T
+ *     : PromiseInterface<T>
+ * )
  *
  * @return PromiseInterface
  */
