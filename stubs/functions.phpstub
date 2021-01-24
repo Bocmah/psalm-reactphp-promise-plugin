@@ -5,7 +5,7 @@ namespace React\Promise;
 /**
  * @param array<array-key, mixed> $promisesOrValues
  *
- * @return PromiseInterface
+ * @return PromiseInterface<array<array-key, mixed>>
  */
 function all($promisesOrValues): PromiseInterface
 {
