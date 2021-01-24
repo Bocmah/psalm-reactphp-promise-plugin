@@ -3,7 +3,7 @@
 namespace React\Promise;
 
 /**
- * @psalm-template TResolve
+ * @psalm-template T
  */
 interface PromiseInterface
 {
