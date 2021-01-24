@@ -20,11 +20,9 @@ interface PromiseInterface
     public function then(callable $onFulfilled = null, callable $onRejected = null, callable $onProgress = null): PromiseInterface;
 
     /**
-     * @psalm-template U
+     * @param callable(mixed):(PromiseInterface<T>|mixed) $onRejected
      *
-     * @param callable(mixed):(PromiseInterface<U>|mixed) $onRejected
-     *
-     * @return PromiseInterface<U>
+     * @return PromiseInterface<T>
      */
     public function otherwise($onRejected): PromiseInterface;
 }
